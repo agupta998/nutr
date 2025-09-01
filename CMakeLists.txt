@@ -107,7 +107,9 @@ option(GEOMETRY_2022-02-07_to_2022-02-15
 option(GEOMETRY_2022-02-21_to_2022-03-02
        "Build Clover Array geometry for time interval 2022-02-21 to 2022-03-02."
        ON)
-
+option(GEOMETRY_2022-11-14_to_2022-11-24
+       "Build Clover Array geometry for time interval 2022-11-14 to 2022-11-24."
+       ON)
 set(PRODUCTION_CUT_LOW_KEV
     "0.99"
     CACHE
@@ -171,6 +173,9 @@ if(${GEOMETRY_2022-02-07_to_2022-02-15})
 endif()
 if(${GEOMETRY_2022-02-21_to_2022-03-02})
   add_subdirectory(src/geometry/clover_array/2022-02-21_to_2022-03-02)
+endif()
+if(${GEOMETRY_2022-11-14_to_2022-11-24})
+  add_subdirectory(src/geometry/clover_array/2022-11-14_to_2022-11-24)
 endif()
 add_subdirectory(src/physics)
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/primary_generator/gps)
