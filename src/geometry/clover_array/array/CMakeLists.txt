@@ -37,6 +37,14 @@ add_library(target92Mo EXCLUDE_FROM_ALL Target92Mo.cc)
 target_include_directories(target92Mo PUBLIC ${PROJECT_SOURCE_DIR}/include/geometry)
 target_link_libraries(target92Mo PUBLIC sourceVolume sourceVolumeTubs)
 
+add_library(target90Zr EXCLUDE_FROM_ALL Target90Zr.cc)
+target_include_directories(target90Zr PUBLIC ${PROJECT_SOURCE_DIR}/include/geometry)
+target_link_libraries(target90Zr PUBLIC sourceVolume sourceVolumeTubs)
+
+add_library(target140Ce EXCLUDE_FROM_ALL Target140Ce.cc)
+target_include_directories(target140Ce PUBLIC ${PROJECT_SOURCE_DIR}/include/geometry)
+target_link_libraries(target140Ce PUBLIC sourceVolume sourceVolumeTubs)
+
 add_library(comptonMonitor_2021-02-16_to_2021-04-18 EXCLUDE_FROM_ALL ComptonMonitor_2021-02-16_to_2021-04-18.cc)
 target_link_libraries(comptonMonitor_2021-02-16_to_2021-04-18 comptonMonitorTarget)
 
